@@ -4,6 +4,7 @@
  * File         : specific-defs.c                                          *
  * Author       : George Dimitrov Sotirov, <astronom@dir.bg>               *
  * Date created : 2001-12-20 16:22 GMT                                     *
+ * Date modified: 2003-05-28 20:33 EEST                                    *
  ***************************************************************************/
 
 #include <stdio.h>
@@ -77,6 +78,13 @@ int main() {
 #ifdef __TURBOC__
     /* Defined in Turbo C and Borland C */
     printf("__TURBOC__          = %d\n", __TURBOC__);
+#endif
+
+/****** Watcom Compilers ******/
+
+#ifdef __WATCOMC__
+    /* Defined in Watcom compiler (MS-DOS) */
+    printf("__WATCOMC__         = %d\n", __WATCOMC__);
 #endif
 
 /****** Microsoft compilers ******/
