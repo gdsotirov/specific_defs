@@ -339,6 +339,15 @@ printf("-----------------------------------------\n");
     printf("__i386__            = %d\n", __i386__);
 #endif
 
+/* x86-64 */
+#ifdef __x86_64
+    printf("__x86_64            = %d\n", __x86_64);
+#endif
+
+#ifdef __x86_64__
+    printf("__x86_64__          = %d\n", __x86_64__);
+#endif
+
 /* Encore Computer */
 #ifdef MULTIMAX
     printf("MULTIMAX            = %d\n", MULTIMAX);
