@@ -2,9 +2,9 @@
  * Definitions automatically provided by preprocessors of some compilers   *
  * ----------------------------------------------------------------------- *
  * File         : specific-defs.c                                          *
- * Author       : George Dimitrov Sotirov, <astronom@dir.bg>               *
+ * Author       : George Dimitrov Sotirov, <gdsotirov@gmail.com>           *
  * Date created : 2001-12-20 16:22 GMT                                     *
- * Date modified: 2003-05-28 20:33 EEST                                    *
+ * Date modified: 2020-08-05 14:25 EEST                                    *
  ***************************************************************************/
 
 #include <stdio.h>
@@ -57,7 +57,19 @@ int main() {
     printf("\nCompiler specific definitions:\n");
     printf("-----------------------------------------\n");
 
+/****** Apple compilers ******/
+
+#ifdef __APPLE_CC__
+    /* Gives Apple's GCC version */
+    printf("__APPLE_CC__        = %d\n", __APPLE_CC__);
+#endif
+
+#ifdef __apple_build_version__
+    printf("__apple_build_version__ = %d\n", __apple_build_version__);
+#endif
+
 /****** Borland compilers ******/
+
 #ifdef __BORLANDC__
     /* Gives the version number of Borland compiler
        Type: decimal constant */
@@ -237,6 +249,15 @@ printf("-----------------------------------------\n");
     printf("MCH_AMIGA           = %d\n", MCH_AMIGA);
 #endif
 
+/* OS: Apple (MacOS) */
+
+#ifdef __APPLE__
+    printf("__APPLE__           = %d\n", __APPLE__);
+#endif
+
+#ifdef __MACH__
+    printf("__MACH__            = %d\n", __MACH__);
+#endif
 
 /* OS: ATARI-ST */
 #ifdef atarist
