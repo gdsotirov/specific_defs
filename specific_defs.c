@@ -92,6 +92,33 @@ int main() {
     printf("__TURBOC__          = %d\n", __TURBOC__);
 #endif
 
+/****** Clang Compilers ******/
+
+#ifdef __clang__
+    /* Defined by Clang */
+    printf("__clang__           = %d\n", __clang__);
+#endif
+
+#ifdef __clang_major__
+    /* Defines Clang's major version */
+    printf("__clang_major__     = %d\n", __clang_major__);
+#endif
+
+#ifdef __clang_minor__
+    /* Defines Clang's minor version */
+    printf("__clang_minor__     = %d\n", __clang_minor__);
+#endif
+
+#ifdef __clang_patchlevel__
+    /* Defines Clang's patch version */
+    printf("__clang_patchlevel__= %d\n", __clang_patchlevel__);
+#endif
+
+#ifdef __clang_version__
+    /* Gives full Clang version */
+    printf("__clang_version__   = %s\n", __clang_version__);
+#endif
+
 /****** Watcom Compilers ******/
 
 #ifdef __WATCOMC__
