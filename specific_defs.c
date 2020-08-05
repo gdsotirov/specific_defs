@@ -37,7 +37,7 @@ int main() {
 
 #ifdef __cplusplus
     /* Defined in almost every C++ compiler */
-    printf("__cplusplus         = %d\n", __cplusplus);
+    printf("__cplusplus         = %ld\n", __cplusplus);
 #endif
 
 #ifdef _cplusplus
